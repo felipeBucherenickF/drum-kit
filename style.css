@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Domine", serif;
+  font-size: 62.5%;
+}
+
+img {
+  width: 10rem;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: bolder;
+}
+
+.drum-kit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
+  margin: 8rem 0;
+}
+
+.drum-kit__keys {
+  display: flex;
+  gap: 2rem;
+}
+
+.drum-kit__key {
+  position: relative;
+  border: 1rem solid black;
+  border-radius: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.drum-kit__key p {
+  position: absolute;
+  bottom: -16px;
+  left: -3px;
+  padding: 0.6rem;
+  font-size: 8rem;
+  font-weight: bolder;
+  color: gold;
+}
+
+@keyframes scaleKey {
+  0% {
+    scale: 1;
+  }
+  10% {
+    scale: 0.99;
+  }
+  20% {
+    scale: 0.98;
+  }
+  30% {
+    scale: 0.97;
+  }
+  40% {
+    scale: 0.96;
+  }
+  50% {
+    scale: 0.95;
+  }
+  60% {
+    scale: 0.96;
+  }
+  70% {
+    scale: 0.97;
+  }
+  80% {
+    scale: 0.98;
+  }
+  90% {
+    scale: 0.99;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.clicked-key {
+  animation-name: scaleKey;
+  animation-duration: 0.08s;
+}
+
+.footer {
+  margin: 12rem auto;
+}
+
+.footer p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.footer img {
+  width: 24px;
+}
